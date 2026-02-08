@@ -1,0 +1,40 @@
+'use client';
+
+export default function GlobalError({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  return (
+    <html lang="en">
+      <body style={{
+        fontFamily: 'system-ui, "Segoe UI", Roboto, sans-serif',
+        padding: '2rem',
+        maxWidth: '600px',
+        margin: '0 auto',
+        textAlign: 'center',
+      }}>
+        <h1>Something went wrong</h1>
+        <p style={{ color: '#666', marginBottom: '1.5rem' }}>
+          An unexpected error occurred. Please try again.
+        </p>
+        <button
+          onClick={() => reset()}
+          style={{
+            padding: '0.5rem 1rem',
+            fontSize: '1rem',
+            cursor: 'pointer',
+            backgroundColor: '#0070f3',
+            color: 'white',
+            border: 'none',
+            borderRadius: '6px',
+          }}
+        >
+          Try again
+        </button>
+      </body>
+    </html>
+  );
+}
