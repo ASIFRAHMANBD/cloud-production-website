@@ -116,7 +116,7 @@
 
     <!-- Start Hero Area -->
 
-    <section class="contact-page-hero common-page-header">
+    <section class="contact-page-hero common-page-header" style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('assets/images/others/services_n.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-11 m-auto">
@@ -188,115 +188,163 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="message-form-left f-link">
-                                 
-                                    <ul>
-                                        <li ><a href="javascript:void(0)" class="message-form-address">
-                                                <span><i class="fa-solid fa-phone"></i></span>
-                                                
-                                                <p>+8801752411182</p>
-                                            </a>
-                                        </li>
-                                      
-                                        <li ><a href="javascript:void(0)" class="message-form-address">
-                                                <span><i class="fa-solid fa-envelope"></i></span>
-                                                
-                                                <p>info@cloudproductio.com</br> admin@clouoductio.com</p>
-                                            </a>
-                                        </li>
-                                          <li ><a href="javascript:void(0)" class="message-form-address">
-                                                <span><i class="fa-solid fa-location-dot"></i></span>
-                                                <p>2nd Floor, 273/3, Dhaka Cantonment, Mirpur Link Road, Dhaka-1206</p>
-                                            </a>
-                                        </li>
-                                        
-                                    
-                                    </ul>
-                                </div>
-                </div>
-                <div class="col-lg-8 col-md-8 col-12">
-                  <div class="row">
-                    <div class="col-lg-12">
-                        <div class="contract-form-wrapper">
-                            <form action="mailto:info@cloudproductionltd.com?subject=Contact%20Form%20Submission" method="GET" class="contact-form">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" name="Name" class="form-control" id="" aria-describedby="" placeholder="Your Name" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" name="LastName" class="form-control" id="" aria-describedby="" placeholder="Last Name" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" name="Company" class="form-control" id="" aria-describedby="" placeholder="Company Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="email" name="Email" class="form-control" id="" aria-describedby="" placeholder="Your Email" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <select name="Service" class="form-select" aria-label="Service" required>
-                                                <option selected>Service</option>
-                                                <option value="1">Custom Software</option>
-                                                <option value="2">Desktop Application</option>
-                                                <option value="3">Mobile App</option>
-                                                <option value="4">Gen AI</option>
-                                                <option value="5">Web Development</option>
-                                                <option value="6">Designing</option>
-                                                <option value="7">Business Automation</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <select name="Budget" class="form-select" aria-label="Budget" required>
-                                                <option selected>Budget</option>
-                                                <option value="1">Consultation Free</option>
-                                                <option value="2">$1K-$5K</option>
-                                                <option value="3">$5K-$10K</option>
-                                                <option value="4">$10K+</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <textarea  placeholder="Tell us more about idea!" class="form-control" name="Message" id="exampleFormControlTextarea1" rows="3" required></textarea>                                       
-                                        </div>
-                                    </div>    
-                                    
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 ">
-                                         <button type="submit" class="btn btn-default float-end">Submit</button>
-                                    </div>
-                                </div>
-                                
-                            </form>
+            <div class="row contact-section-row align-items-stretch">
+                <style>
+                    #message-form-part::before { pointer-events: none !important; }
+                    .contact-section-row .contact-info-card {
+                        background: #fff;
+                        border-radius: 16px;
+                        box-shadow: 0 4px 20px rgba(8,24,40,0.06);
+                        border: 1px solid rgba(8,24,40,0.06);
+                        padding: 1.75rem;
+                        height: 100%;
+                    }
+                    .contact-section-row .contact-info-card h4 { font-size: 1.1rem; font-weight: 700; color: #081828; margin-bottom: 1.25rem; }
+                    .contact-section-row .contact-info-item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+                    .contact-section-row .contact-info-item:last-child { margin-bottom: 0; }
+                    .contact-section-row .contact-info-item i { color: #298DB7; font-size: 1.1rem; margin-top: 0.2rem; min-width: 1.25rem; }
+                    .contact-section-row .contact-info-item a { color: #374151; text-decoration: none; font-size: 0.95rem; line-height: 1.5; }
+                    .contact-section-row .contact-info-item a:hover { color: #298DB7; }
+                    .contact-section-row .contact-form-card {
+                        background: #fff;
+                        border-radius: 16px;
+                        box-shadow: 0 4px 20px rgba(8,24,40,0.06);
+                        border: 1px solid rgba(8,24,40,0.06);
+                        padding: 1.75rem 2rem;
+                        height: 100%;
+                    }
+                    .contact-section-row .contact-form-card .form-group { margin-bottom: 1.1rem; }
+                    .contact-section-row .contact-form-card label { display: block; font-size: 0.8125rem; font-weight: 600; color: #374151; margin-bottom: 0.35rem; }
+                    .contact-section-row .contact-form-card .form-control,
+                    .contact-section-row .contact-form-card .form-select {
+                        width: 100%; padding: 0.6rem 1rem; font-size: 1rem; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff;
+                        pointer-events: auto; -webkit-appearance: menulist; appearance: menulist;
+                    }
+                    .contact-section-row .contact-form-card .form-control:focus,
+                    .contact-section-row .contact-form-card .form-select:focus {
+                        outline: none; border-color: #298DB7; box-shadow: 0 0 0 3px rgba(41,141,183,0.12);
+                    }
+                    .contact-section-row .contact-form-card textarea.form-control { min-height: 100px; resize: vertical; }
+                    .contact-section-row .contact-form-card .btn-submit {
+                        padding: 0.65rem 1.5rem; font-weight: 600; color: #fff; background: linear-gradient(135deg, #298DB7, #236a8f);
+                        border: none; border-radius: 8px; cursor: pointer; transition: opacity 0.2s;
+                    }
+                    .contact-section-row .contact-form-card .btn-submit:hover { opacity: 0.95; }
+                </style>
+                <div class="col-lg-4 col-md-4 col-12 mb-4 mb-lg-0">
+                    <div class="contact-info-card">
+                        <h4>Get in touch</h4>
+                        <div class="contact-info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+8801752411182">+8801752411182</a>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <a href="mailto:info@cloudproductionltd.com">info@cloudproductionltd.com</a><br>
+                                <a href="mailto:admin@cloudproductionltd.com">admin@cloudproductionltd.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>2nd Floor, 273/3, Dhaka Cantonment, Mirpur Link Road, Dhaka-1206</span>
                         </div>
                     </div>
-                  </div>  
+                </div>
+                <div class="col-lg-8 col-md-8 col-12">
+                    <div class="contact-form-card">
+                        <form id="contact-form" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contact-name">First Name</label>
+                                        <input type="text" name="Name" class="form-control" id="contact-name" placeholder="Your name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contact-lastname">Last Name</label>
+                                        <input type="text" name="LastName" class="form-control" id="contact-lastname" placeholder="Last name" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contact-company">Company</label>
+                                        <input type="text" name="Company" class="form-control" id="contact-company" placeholder="Company name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contact-email">Email</label>
+                                        <input type="email" name="Email" class="form-control" id="contact-email" placeholder="you@example.com" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contact-service">Service</label>
+                                        <select name="Service" id="contact-service" class="form-select" required>
+                                            <option value="" disabled selected>Select service</option>
+                                            <option value="1">Custom Software</option>
+                                            <option value="2">Desktop Application</option>
+                                            <option value="3">Mobile App</option>
+                                            <option value="4">Gen AI</option>
+                                            <option value="5">Web Development</option>
+                                            <option value="6">Designing</option>
+                                            <option value="7">Business Automation</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="contact-message">Message</label>
+                                        <textarea name="Message" id="contact-message" class="form-control" rows="4" placeholder="Tell us about your project or idea." required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-end">
+                                    <button type="submit" class="btn-submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>              
     </Section>
+
+    <script>
+    (function() {
+        var form = document.getElementById('contact-form');
+        if (!form) return;
+        var serviceLabels = { '1':'Custom Software','2':'Desktop Application','3':'Mobile App','4':'Gen AI','5':'Web Development','6':'Designing','7':'Business Automation' };
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = (form.querySelector('#contact-name') && form.querySelector('#contact-name').value) || '';
+            var last = (form.querySelector('#contact-lastname') && form.querySelector('#contact-lastname').value) || '';
+            var company = (form.querySelector('#contact-company') && form.querySelector('#contact-company').value) || '';
+            var email = (form.querySelector('#contact-email') && form.querySelector('#contact-email').value) || '';
+            var serviceSel = form.querySelector('#contact-service');
+            var service = serviceSel ? serviceLabels[serviceSel.value] || serviceSel.options[serviceSel.selectedIndex].text : '';
+            var messageEl = form.querySelector('#contact-message');
+            var message = (messageEl && messageEl.value) ? messageEl.value.trim() : '';
+            var body = 'Name: ' + name + ' ' + last + '\r\n';
+            body += 'Email: ' + email + '\r\n';
+            if (company) body += 'Company: ' + company + '\r\n';
+            if (service) body += 'Service: ' + service + '\r\n\r\n';
+            body += 'Message:\r\n' + message;
+            var subject = 'Client Review – Cloud Production Contact';
+            var mailto = 'mailto:info@cloudproductionltd.com?cc=asifrahman449@gmail.com&subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            window.location.href = mailto;
+        });
+    })();
+    </script>
 
     <section class="map-location">
         <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
@@ -441,7 +489,7 @@
                                         <li ><a href="javascript:void(0)" class="footer-address">
                                                 <span><i class="fa-solid fa-envelope"></i></span>
                                                 
-                                                <p>info@cloudproductio.com</br> admin@clouoductio.com</p>
+                                                <p>info@cloudproductionltd.com<br>admin@cloudproductionltd.com</p>
                                             </a>
                                         </li>
                                         <li ><a href="javascript:void(0)" class="footer-address">

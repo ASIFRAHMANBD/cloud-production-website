@@ -9,6 +9,7 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_SERVER_ACTIONS_ENCRYPTION_KEY="VqMxG2UC6YVC9MYhQGu+u8oqDPFgeu6Kp3ADB06eQDw="
 RUN npm run build
 
 FROM node:20-alpine AS runner
@@ -27,7 +28,6 @@ COPY --from=builder --chown=appuser:appgroup /app/.next/static ./.next/static
 USER appuser
 EXPOSE 3000
 ENV PORT=3000
-# Optional: set at runtime to reduce "Failed to find Server Action" (e.g. docker run -e NEXT_SERVER_ACTIONS_ENCRYPTION_KEY=...)
-# Generate with: openssl rand -hex 32
+ENV NEXT_SERVER_ACTIONS_ENCRYPTION_KEY="VqMxG2UC6YVC9MYhQGu+u8oqDPFgeu6Kp3ADB06eQDw="
 
 CMD ["node", "server.js"]
