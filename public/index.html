@@ -86,6 +86,98 @@
     <link href="assets/css/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /* Mobile responsive - home page */
+      @media (max-width: 991px) {
+        .section-hearder h1,
+        .trust-section-padding .section-hearder h1,
+        .our-servies-part-section-padding .section-hearder h1,
+        .portfolio .section-hearder h1,
+        .our-core-technology .section-hearder h1,
+        .common-heading-color-1,
+        .common-heading-color-2 {
+          font-size: 1.75rem !important;
+          line-height: 1.3;
+        }
+        .trust-section-padding .section-hearder { padding-bottom: 40px; }
+        .section-content-right-part { margin-left: 0; margin-top: 1rem; }
+        .section-content-left-part { margin-right: 0; margin-bottom: 1rem; }
+        .trust-area-content .section-left-part { height: auto; min-height: 200px; }
+        .client-testimonial .testimonial-content .quote-container { font-size: 1.5rem; padding-right: 0; }
+        .client-testimonial .testimonial-bottom { margin-top: 1rem; }
+      }
+      @media (max-width: 767px) {
+        .hero-area { padding: 100px 0 40px 0 !important; }
+        .hero-area .hero-image-wrap {
+          max-width: 100%;
+          overflow: hidden;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .hero-area .hero-image-wrap dotlottie-wc {
+          width: 100% !important;
+          max-width: 100% !important;
+          transform: scale(1) translateX(0) !important;
+        }
+        .hero-area .hero-content .button .btn { width: 100%; max-width: 280px; }
+        .section-hearder h1,
+        .trust-section-padding .section-hearder h1,
+        .our-servies-part-section-padding .section-hearder h1,
+        .portfolio .section-hearder h1,
+        .our-core-technology .section-hearder h1,
+        .common-heading-color-1,
+        .common-heading-color-2 {
+          font-size: 1.5rem !important;
+          line-height: 1.35;
+        }
+        .client-testimonial { padding-top: 50px; padding-bottom: 50px; }
+        .client-testimonial .testimonial-content .quote-container {
+          font-size: 1.25rem;
+          padding-right: 0;
+          text-align: center;
+        }
+        .client-testimonial .testimonial-bottom p { font-size: 1rem; }
+        .client-testimonial .testimonial-bottom { text-align: center; }
+        .custom-wrapper.custom-pl.custom-pr { padding-left: 15px; padding-right: 15px; }
+        .trust-section-padding { padding-top: 40px; padding-bottom: 40px; }
+        .trust-section-padding .section-hearder { padding-bottom: 30px; }
+        .trust-area-content .section-left-part { min-height: 180px; }
+        .trust-area-content h3 { font-size: 1.25rem; }
+        .trust-area-content p { font-size: 1rem; }
+        .our-achievement-1 { padding: 40px 15px; border-radius: 12px; }
+        .our-achievement .single-achievement { margin-bottom: 1.5rem; padding: 0 5px; }
+        .our-achievement .single-achievement h3 { font-size: 1.75rem; }
+        .our-achievement .single-achievement-last { margin-top: 0.5rem; }
+        .our-servies-part-section-padding .section-hearder { padding-bottom: 15px; }
+        .service-card-service { margin-bottom: 1rem; }
+        .portfolio .portfolio-filters { flex-wrap: wrap; justify-content: center; gap: 8px; }
+        .portfolio .portfolio-filters li { margin: 4px; font-size: 14px; }
+        .portfolio .section-hearder p { font-size: 1rem; }
+        .our-core-technology .section-hearder p { font-size: 1rem; }
+        .core-technology-card { margin-bottom: 1rem; }
+        .navbar-brand img { max-height: 40px; width: auto !important; }
+        .ai-projects-showcase .section-hearder h1 { font-size: 1.5rem !important; }
+        .ai-projects-showcase .ai-project-card { padding: 20px !important; }
+        /* Footer Address section - aligned on mobile */
+        .footer .single-footer.f-link h3 { text-align: center; }
+        .footer .single-footer.f-link ul { list-style: none; padding-left: 0; margin: 0 auto; max-width: 320px; text-align: left; }
+        .footer .single-footer.f-link li a.footer-address { display: flex; align-items: flex-start; text-align: left; padding: 0.35rem 0; gap: 12px; }
+        .footer .single-footer.f-link li a.footer-address span { flex-shrink: 0; width: 22px; margin-right: 0; text-align: center; }
+        .footer .single-footer.f-link li a.footer-address span i { font-size: 1rem; }
+        .footer .single-footer.f-link li a.footer-address p { flex: 1; margin: 0; min-width: 0; line-height: 1.5; word-break: break-word; }
+      }
+      @media (max-width: 575px) {
+        .section-hearder h1,
+        .trust-section-padding .section-hearder h1,
+        .our-servies-part-section-padding .section-hearder h1,
+        .portfolio .section-hearder h1,
+        .our-core-technology .section-hearder h1,
+        .common-heading-color-1,
+        .common-heading-color-2 { font-size: 1.35rem !important; }
+        .client-testimonial .testimonial-content .quote-container { font-size: 1.1rem; }
+        .our-achievement .single-achievement h3 { font-size: 1.5rem; }
+      }
+    </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -210,7 +302,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-12">
 
-                    <div class=" order-1 order-lg-2 hero-img hero-image" data-aos="zoom-out" data-aos-delay="100">
+                    <div class="order-1 order-lg-2 hero-img hero-image hero-image-wrap" data-aos="zoom-out" data-aos-delay="100">
                         <dotlottie-wc src="https://lottie.host/0cdf3999-4985-4455-9259-8e87ebba585b/r0B6SZzT3u.lottie" style="width: 140%; height: auto; transform: scale(1.2) translateX(-10%);" autoplay loop></dotlottie-wc>
                     </div>
                   

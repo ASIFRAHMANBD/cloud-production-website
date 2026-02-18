@@ -413,6 +413,39 @@
             }
         }
     </style>
+    <style>
+      /* Mobile responsive - Solutions page (global + hero) */
+      @media (max-width: 991px) {
+        .common-page-header h1, .banner-heading-color-1, .section-title { font-size: 1.75rem !important; line-height: 1.3; }
+        .common-page-header p, .section-subtitle { font-size: 1rem; }
+        .nav-wrapper { padding: 1.25rem; }
+      }
+      @media (max-width: 767px) {
+        .common-page-header { padding: 80px 0 50px 0 !important; }
+        .common-page-header h1, .banner-heading-color-1, .section-title { font-size: 1.5rem !important; }
+        .common-page-header p, .section-subtitle { font-size: 0.95rem; padding: 0 10px; }
+        .navbar-brand img { max-height: 40px; width: auto !important; }
+        .modern-solutions-section { padding: 50px 0 !important; }
+        .nav-wrapper { padding: 1rem; margin-bottom: 1.5rem; }
+        .solution-nav-item { padding: 0.875rem; flex-wrap: wrap; }
+        .nav-icon { width: 48px; height: 48px; margin-right: 0.75rem; }
+        .nav-content h4 { font-size: 1rem; }
+        .solution-image { height: 200px; }
+        .solution-details, .content-wrapper { padding: 1rem !important; }
+        /* Footer Address section - aligned on mobile */
+        .footer .single-footer.f-link h3 { text-align: center; }
+        .footer .single-footer.f-link ul { list-style: none; padding-left: 0; margin: 0 auto; max-width: 320px; text-align: left; }
+        .footer .single-footer.f-link li a.footer-address { display: flex; align-items: flex-start; text-align: left; padding: 0.35rem 0; gap: 12px; }
+        .footer .single-footer.f-link li a.footer-address span { flex-shrink: 0; width: 22px; margin-right: 0; text-align: center; }
+        .footer .single-footer.f-link li a.footer-address span i { font-size: 1rem; }
+        .footer .single-footer.f-link li a.footer-address p { flex: 1; margin: 0; min-width: 0; line-height: 1.5; word-break: break-word; }
+      }
+      @media (max-width: 575px) {
+        .common-page-header { padding: 70px 0 40px 0 !important; }
+        .section-title, .common-page-header h1 { font-size: 1.35rem !important; }
+        .solution-image { height: 180px; }
+      }
+    </style>
 
 </head>
 
