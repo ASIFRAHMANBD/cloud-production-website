@@ -1,33 +1,23 @@
-FROM node:20-alpine AS deps
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
-COPY package.json package-lock.json* ./
-RUN npm ci
 
+
+# --- Builder stage: only what is needed for static export ---
 FROM node:20-alpine AS builder
 WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+COPY package.json package-lock.json* ./
+RUN npm ci --omit=dev
+COPY public ./public
+COPY next.config.ts ./
+COPY tsconfig.json ./
+COPY app ./app
+COPY instrumentation.ts ./
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV NEXT_SERVER_ACTIONS_ENCRYPTION_KEY="VqMxG2UC6YVC9MYhQGu+u8oqDPFgeu6Kp3ADB06eQDw="
 RUN npm run build
 
+# --- Final stage: minimal static file server, non-root ---
 FROM node:20-alpine AS runner
 WORKDIR /app
-ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
-
-ENV NODE_OPTIONS="--max-old-space-size=400"
-
-RUN addgroup -S appgroup && adduser -S appuser -G appgroup
-
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=appuser:appgroup /app/.next/standalone ./
-COPY --from=builder --chown=appuser:appgroup /app/.next/static ./.next/static
-
-USER appuser
+RUN npm install -g http-server
+COPY --from=builder /app/out ./out
+USER 1000
 EXPOSE 3000
-ENV PORT=3000
-ENV NEXT_SERVER_ACTIONS_ENCRYPTION_KEY="VqMxG2UC6YVC9MYhQGu+u8oqDPFgeu6Kp3ADB06eQDw="
-
-CMD ["node", "server.js"]
+CMD ["http-server", "out", "-p", "3000", "--ext", "html"]

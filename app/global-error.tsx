@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect } from 'react';
+
 export default function GlobalError({
   error,
   reset,
@@ -7,6 +9,21 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  useEffect(() => {
+    // Fallback only: reload once on Server Action deployment skew.
+    if (
+      error.message &&
+      (error.message.includes('Failed to find Server Action') ||
+        error.message.includes('Server Action'))
+    ) {
+      const reloadFlag = 'server-action-reload-attempted';
+      if (!sessionStorage.getItem(reloadFlag)) {
+        sessionStorage.setItem(reloadFlag, '1');
+        window.location.reload();
+      }
+    }
+  }, [error]);
+
   return (
     <html lang="en">
       <body style={{
