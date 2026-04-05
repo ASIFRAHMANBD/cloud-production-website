@@ -60,6 +60,110 @@
         .common-page-header h1, .banner-heading-color-1 { font-size: 1.35rem !important; }
         .portfolio .section-hearder h1 { font-size: 1.35rem !important; }
       }
+            .portfolio-image-placeholder {
+                min-height: 260px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 24px;
+                border-radius: 16px;
+                background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 50%, #0f766e 100%);
+                color: #fff;
+                text-align: center;
+            }
+            .portfolio-image-placeholder span {
+                display: inline-block;
+                padding: 10px 14px;
+                border: 1px solid rgba(255, 255, 255, 0.35);
+                border-radius: 999px;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+            }
+            .portfolio .portfolio-item.cloud-hr-track-card .portfolio-info h4,
+            .portfolio .portfolio-item.cloud-hr-track-card .portfolio-info p {
+                color: #fff;
+            }
+            .portfolio .portfolio-item.lienexpos-card .portfolio-info h4,
+            .portfolio .portfolio-item.lienexpos-card .portfolio-info p {
+                color: #fff;
+            }
+            .portfolio-modal .modal-content {
+                border: 0;
+                border-radius: 24px;
+                overflow: hidden;
+            }
+            .portfolio-modal .modal-header {
+                border-bottom: 0;
+                padding: 1.5rem 1.5rem 0;
+            }
+            .portfolio-modal .modal-body {
+                padding: 1rem 1.5rem 1.5rem;
+            }
+            .portfolio-modal .modal-title {
+                font-weight: 700;
+            }
+            .portfolio-modal-cover {
+                margin-bottom: 1.5rem;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+                background: #0f172a;
+            }
+            .portfolio-modal-cover img {
+                width: 100%;
+                height: 620px;
+                object-fit: cover;
+                object-position: center 65%;
+                background: #0f172a;
+                display: block;
+            }
+            .portfolio-modal-cover-caption {
+                padding: 1rem 1.25rem 1.15rem;
+                color: #fff;
+                background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 55%, #0f766e 100%);
+            }
+            .portfolio-modal-cover-caption h5 {
+                color: #fff;
+                margin-bottom: 0.4rem;
+            }
+            .portfolio-modal-cover-caption p {
+                color: rgba(255, 255, 255, 0.92);
+                margin-bottom: 0;
+            }
+            .portfolio-modal-tag {
+                display: inline-block;
+                margin: 0 0.5rem 0.5rem 0;
+                padding: 0.45rem 0.8rem;
+                border-radius: 999px;
+                background: rgba(15, 23, 42, 0.08);
+                color: #0f172a;
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+            .portfolio-modal-section {
+                padding: 1.1rem 1.15rem;
+                border: 1px solid rgba(15, 23, 42, 0.08);
+                border-radius: 18px;
+                background: #fff;
+                box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+            }
+            .portfolio-modal-section h5,
+            .portfolio-modal-section h6 {
+                color: #0f172a;
+                font-weight: 700;
+            }
+            .portfolio-modal-section p {
+                color: #334155;
+                line-height: 1.7;
+            }
+            .portfolio-modal-list {
+                padding-left: 1.1rem;
+                margin-bottom: 0;
+            }
+            .portfolio-modal-list li {
+                margin-bottom: 0.5rem;
+            }
     </style>
 
 </head>
@@ -175,6 +279,32 @@
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web cloud-hr-track-card">
+                <div class="isotope-item-content">
+                    <img src="assets/images/others/Cloud-HR-Track-platform-features-showcased.png" class="img-fluid" alt="Cloud HR Track platform features showcased">
+                    <div class="portfolio-info">
+                        <h4>Cloud HR Track</h4>
+                        <p>Cloud-based HR platform for simpler employee management, workflow transparency, and team alignment.</p>
+                        <button type="button" class="details-link btn p-0 border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#cloudHrTrackModal" title="More Details" aria-label="Open Cloud HR Track details">
+                            <i class="lni lni-link"></i>
+                        </button>
+                    </div>
+                </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web lienexpos-card">
+                <div class="isotope-item-content">
+                    <img src="assets/images/others/Lienexpos.png" class="img-fluid" alt="Lienexpos CRM and business automation platform cover">
+                    <div class="portfolio-info">
+                        <h4>Lienexpos</h4>
+                        <p>Enterprise CRM and business automation ecosystem integrating POS, inventory, HRM, accounting, and e-commerce.</p>
+                        <button type="button" class="details-link btn p-0 border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#lienexposModal" title="More Details" aria-label="Open Lienexpos details">
+                            <i class="lni lni-link"></i>
+                        </button>
+                    </div>
+                </div>
+            </div><!-- End Portfolio Item -->
 
             
             
@@ -379,6 +509,232 @@
     </section>
     <!-- /Portfolio Section -->
 
+        <div class="modal fade portfolio-modal" id="cloudHrTrackModal" tabindex="-1" aria-labelledby="cloudHrTrackModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-4" id="cloudHrTrackModalLabel">Cloud HR Track</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="portfolio-modal-cover">
+                            <img src="assets/images/others/Cloud-HR-Track-platform-features-showcased.png" alt="Cloud HR Track platform features showcased in a large cover layout">
+                            <div class="portfolio-modal-cover-caption">
+                                <h5>Cloud-ready HR platform</h5>
+                                <p>Built to make department coordination clearer, simplify daily operations, and keep workflows transparent across the organization.</p>
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="portfolio-modal-section">
+                                    <h5 class="mb-3">Project description</h5>
+                                    <p>Cloud HR Track is a modern, cloud-based Human Resource Management platform developed from scratch using Node.js, Next.js, and PostgreSQL to deliver a simple, customizable, and scalable employee management solution.</p>
+                                    <p class="mb-0">The system was built to replace complex enterprise HR tools with a lightweight platform tailored specifically to the client’s internal workflow and operational needs. The client previously used Salesforce to manage costing and customization features, but migrated to Cloud HR Track to achieve a simpler interface, faster workflow, and full customization aligned with their business processes. The project successfully delivered that goal.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Project objective</h5>
+                                    <p class="mb-0">To create an easy-to-use HR platform that removes unnecessary enterprise complexity while giving organizations complete control over their HR workflows and data structure.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Technology stack</h5>
+                                    <div class="portfolio-modal-tag">Backend: Node.js</div>
+                                    <div class="portfolio-modal-tag">Frontend: Next.js</div>
+                                    <div class="portfolio-modal-tag">Database: PostgreSQL</div>
+                                    <div class="portfolio-modal-tag">Architecture: Cloud-ready & modular</div>
+                                    <div class="portfolio-modal-tag">Design goal: Simple, customizable, scalable</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Core features</h5>
+                                    <div class="mb-3">
+                                        <h6 class="mb-2">Employee data management</h6>
+                                        <p class="mb-0">Centralized employee database for personal information, roles and departments, employment records, and performance history.</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6 class="mb-2">Recruitment and candidate tracking</h6>
+                                        <p class="mb-0">Applicant tracking, interview stage management, resume storage, and automated recruitment workflow.</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6 class="mb-2">Employee performance management</h6>
+                                        <p class="mb-0">KPI and goal tracking, performance reviews, feedback management, and progress analytics.</p>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-2">Employee communication and collaboration</h6>
+                                        <p class="mb-0">Team communication, task collaboration, department coordination, and workflow transparency.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Key value</h5>
+                                    <ul class="portfolio-modal-list">
+                                        <li>Simplified HR operations</li>
+                                        <li>Full customization control</li>
+                                        <li>Cloud accessibility</li>
+                                        <li>Lightweight performance</li>
+                                        <li>Business-specific workflow design</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade portfolio-modal" id="lienexposModal" tabindex="-1" aria-labelledby="lienexposModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-4" id="lienexposModalLabel">Lienexpos</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="portfolio-modal-cover">
+                            <img src="assets/images/others/Lienexpos.png" alt="Lienexpos complete CRM and business automation platform cover">
+                            <div class="portfolio-modal-cover-caption">
+                                <h5>Complete CRM and business automation platform</h5>
+                                <p>Unified ecosystem with real-time synchronization across operations, finance, customer engagement, and decision intelligence.</p>
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="portfolio-modal-section">
+                                    <h5 class="mb-3">Project overview</h5>
+                                    <p>Lienexpos is a comprehensive enterprise-grade CRM and business automation ecosystem designed to centralize and automate multiple business operations within a single unified platform.</p>
+                                    <p class="mb-0">The system integrates POS, inventory, HRM, accounting, CRM, e-commerce, and analytics into one synchronized environment, enabling organizations to manage operations efficiently with real-time data visibility.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Project goals</h5>
+                                    <ul class="portfolio-modal-list">
+                                        <li>Automate end-to-end business workflows</li>
+                                        <li>Centralize multi-branch management</li>
+                                        <li>Enable real-time data synchronization</li>
+                                        <li>Reduce manual operational errors</li>
+                                        <li>Provide actionable analytics and reporting</li>
+                                        <li>Support scalable business growth</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Technology stack</h5>
+                                    <div class="portfolio-modal-tag">Backend: Ruby on Rails (API architecture)</div>
+                                    <div class="portfolio-modal-tag">Frontend: Angular</div>
+                                    <div class="portfolio-modal-tag">Database: MySQL</div>
+                                    <div class="portfolio-modal-tag">Mobile apps: Ionic + Capacitor</div>
+                                    <div class="portfolio-modal-tag">Server: Nginx + Passenger</div>
+                                    <div class="portfolio-modal-tag">API: RESTful secure APIs</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="portfolio-modal-section">
+                                    <h5 class="mb-3">Core system modules</h5>
+                                    <div class="row g-3">
+                                        <div class="col-lg-6">
+                                            <h6 class="mb-2">1. Point of Sale (POS)</h6>
+                                            <p class="mb-0">Fast billing, barcode scanning, discount and VAT calculation, multi-payment support, and invoice generation.</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="mb-2">2. Inventory management</h6>
+                                            <p class="mb-0">Real-time stock monitoring, batch and lot tracking, low-stock alerts, multi-warehouse support, and automatic stock updates.</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="mb-2">3. Multi-business and branch management</h6>
+                                            <p class="mb-0">Centralized control of multiple businesses, branch performance tracking, and unified reporting dashboards.</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="mb-2">4. Purchase management</h6>
+                                            <p class="mb-0">Supplier management, purchase order tracking, purchase history, and auto inventory synchronization.</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="mb-2">5. HRM (Human Resource Management)</h6>
+                                            <p class="mb-0">Employee database, attendance tracking, payroll processing, leave management, and performance monitoring.</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="mb-2">6. Accounting and financial management</h6>
+                                            <p class="mb-0">Income and expense tracking, profit and loss reports, ledger management, and cash flow monitoring.</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="mb-2">7. Reports and analytics</h6>
+                                            <p class="mb-0">Sales analytics, inventory reports, financial insights, employee performance reports, and BI dashboards.</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="mb-2">8. E-commerce integration</h6>
+                                            <p class="mb-0">Online order synchronization, web and mobile platform integration, and real-time order tracking.</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="mb-2">9. CRM (Customer Relationship Management)</h6>
+                                            <p class="mb-0">Customer database, purchase history tracking, offers and discount management, and engagement tools.</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="mb-2">10. Mobile and remote access</h6>
+                                            <p class="mb-0">Remote system monitoring, mobile-friendly dashboards, and live business tracking.</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6 class="mb-2">11. Security and role management</h6>
+                                            <p class="mb-0">Role-based access control, secure authentication, and data privacy protection.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Advanced integrated applications</h5>
+                                    <div class="mb-3">
+                                        <h6 class="mb-2">Syncher app</h6>
+                                        <p class="mb-0">Real-time synchronization engine that syncs POS with the central database, maintains online and offline consistency, and applies automatic data updates.</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6 class="mb-2">Admin mobile app</h6>
+                                        <p class="mb-0">Live sales analytics, profit and expense monitoring, and real-time decision support.</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <h6 class="mb-2">Order management app</h6>
+                                        <p class="mb-0">Order lifecycle management and fulfillment tracking.</p>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-2">Membership app</h6>
+                                        <p class="mb-0">Customer loyalty programs, OTP authentication, and promotional management.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Key business value</h5>
+                                    <ul class="portfolio-modal-list mb-4">
+                                        <li>Centralized business ecosystem</li>
+                                        <li>Real-time cross-platform synchronization</li>
+                                        <li>Reduced manual workload</li>
+                                        <li>Scalable enterprise architecture</li>
+                                        <li>Data-driven decision making</li>
+                                    </ul>
+                                    <h5 class="mb-3">Target use cases</h5>
+                                    <ul class="portfolio-modal-list mb-4">
+                                        <li>Retail and super shops</li>
+                                        <li>Restaurants</li>
+                                        <li>Pharmacies</li>
+                                        <li>Agro businesses</li>
+                                        <li>Fuel stations</li>
+                                        <li>Multi-branch enterprises</li>
+                                    </ul>
+                                    <h5 class="mb-3">Short portfolio description</h5>
+                                    <p class="mb-0">Lienexpos is an enterprise-level CRM and business automation platform integrating POS, inventory, HRM, accounting, and e-commerce into a unified ecosystem with real-time synchronization and analytics-driven decision support.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
 
@@ -397,11 +753,11 @@
             <div class="row">
                 <div class="col-lg-3 offset-lg-1  offset-md-1 col-md-3 col-12">
                     <div class="message-card-service text-center wow fadeInUp" data-wow-delay=".2s">
-                       <div class="message-icon-service">
+                       <!-- <div class="message-icon-service">
                             <img src="assets/images/others/asif.png" alt="" class="img-fluid">
-                        </div>
+                        </div> -->
                         <div class="message-content-service">
-                            <h3>Hi, I'm Asif.</h3>
+                            <!-- <h3>Hi, I'm Asif.</h3> -->
                             <p>
                             Got an idea? Let’s chat on WhatsApp or jump on a quick call.
                             </p>
