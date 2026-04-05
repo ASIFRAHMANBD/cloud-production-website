@@ -88,6 +88,27 @@
             .portfolio .portfolio-item.lienexpos-card .portfolio-info p {
                 color: #fff;
             }
+            .language-switcher {
+                min-width: 135px;
+            }
+            .language-switcher .form-select {
+                height: 40px;
+                border-radius: 10px;
+                border: 1px solid rgba(41, 141, 183, 0.35);
+                font-size: 14px;
+                font-weight: 600;
+                color: #0f172a;
+                background-color: #fff;
+                padding-top: 0.375rem;
+                padding-bottom: 0.375rem;
+            }
+            @media (max-width: 991px) {
+                .language-switcher {
+                    width: 100%;
+                    margin-top: 12px;
+                    margin-bottom: 12px;
+                }
+            }
             .portfolio-modal .modal-content {
                 border: 0;
                 border-radius: 24px;
@@ -237,6 +258,13 @@
                                  
                                 </ul>
                             </div> <!-- navbar collapse -->
+                            <div class="language-switcher ms-lg-3 me-lg-2">
+                                <label for="languageSelect" class="visually-hidden">Language</label>
+                                <select id="languageSelect" class="form-select form-select-sm" aria-label="Select language">
+                                    <option value="en">EN</option>
+                                    <option value="ja">JP</option>
+                                </select>
+                            </div>
                             <div class="button add-list-button">
                                 <a href="contact.html" class="btn">Contact Us</a>
                             </div>
@@ -1041,6 +1069,261 @@
     <script src="assets/css/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/glightbox.js"></script>
     <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var jaTranslations = {
+                "Home": "ホーム",
+                "About": "会社概要",
+                "Service": "サービス",
+                "Portfolio": "ポートフォリオ",
+                "Solutions": "ソリューション",
+                "Events": "イベント",
+                "Career": "採用情報",
+                "Contact Us": "お問い合わせ",
+                "Web Application & Desktop Application Portfolios": "Webアプリケーション・デスクトップアプリケーションのポートフォリオ",
+                "We go the extra mile in all our projects. Starting with the discovery stage when we carefully analyze your requirements and up to the launch of the finalized product. Cloud Production LTD main goal is to exceed expectations and deliver solution which will be the best fit for each specific business case and take your company to the next level of efficiency.": "私たちはすべてのプロジェクトで期待を超える価値を提供します。要件を丁寧に分析するディスカバリー段階から、最終プロダクトのリリースまで一貫して伴走します。Cloud Production LTDの目標は、各ビジネスケースに最適なソリューションを提供し、企業の効率を次のレベルへ引き上げることです。",
+                "All": "すべて",
+                "Web": "Web",
+                "Apps": "アプリ",
+                "Game": "ゲーム",
+                "Cloud-based HR platform for simpler employee management, workflow transparency, and team alignment.": "よりシンプルな従業員管理、業務の可視化、チーム連携を実現するクラウド型HRプラットフォーム。",
+                "Enterprise CRM and business automation ecosystem integrating POS, inventory, HRM, accounting, and e-commerce.": "POS、在庫、HRM、会計、ECを統合したエンタープライズ向けCRM・業務自動化エコシステム。",
+                "Inventory management for sales floors": "売り場向け在庫管理",
+                "Online learning platform for students": "学生向けオンライン学習プラットフォーム",
+                "Home care reservation system for patients": "患者向け在宅ケア予約システム",
+                "Word Android Game": "Word Androidゲーム",
+                "ID check mobile app development": "IDチェックモバイルアプリ開発",
+                "Health management mobile app development": "健康管理モバイルアプリ開発",
+                "Online job portal construction": "オンライン求人ポータル構築",
+                "E-commerce site construction": "ECサイト構築",
+                "JB Communication E-commerce site": "JB Communication ECサイト",
+                "Colle Pochi Web application": "Colle Pochi Webアプリケーション",
+                "Scalably Community based Web application": "Scalably コミュニティ型Webアプリケーション",
+                "Elmi Laboratory Medical Lab Test Website with Appointment": "Elmi Laboratory 予約対応医療検査Webサイト",
+                "Royal Bakery Corporate Website": "Royal Bakery コーポレートサイト",
+                "Daily Mart Ecommerce Website": "Daily Mart ECサイト",
+                "Education WordPress theme eLearning Website": "教育向けWordPressテーマeラーニングサイト",
+                "Car Racing Multiplayer game": "カーレース マルチプレイヤーゲーム",
+                "Cloud-ready HR platform": "クラウド対応HRプラットフォーム",
+                "Built to make department coordination clearer, simplify daily operations, and keep workflows transparent across the organization.": "部門間連携を明確化し、日々の運用を簡素化し、組織全体のワークフローを可視化するために設計されています。",
+                "Project description": "プロジェクト概要",
+                "Cloud HR Track is a modern, cloud-based Human Resource Management platform developed from scratch using Node.js, Next.js, and PostgreSQL to deliver a simple, customizable, and scalable employee management solution.": "Cloud HR Trackは、Node.js・Next.js・PostgreSQLでゼロから開発された、シンプルでカスタマイズ可能かつ拡張性の高いクラウド型人材管理プラットフォームです。",
+                "The system was built to replace complex enterprise HR tools with a lightweight platform tailored specifically to the client’s internal workflow and operational needs. The client previously used Salesforce to manage costing and customization features, but migrated to Cloud HR Track to achieve a simpler interface, faster workflow, and full customization aligned with their business processes. The project successfully delivered that goal.": "本システムは、複雑なエンタープライズHRツールを、クライアントの社内業務フローに最適化された軽量プラットフォームへ置き換えるために構築されました。クライアントは以前Salesforceで原価管理とカスタマイズ機能を運用していましたが、よりシンプルなUI、高速なワークフロー、業務に沿った完全カスタマイズを実現するためCloud HR Trackへ移行しました。本プロジェクトはその目標を達成しています。",
+                "Project objective": "プロジェクト目標",
+                "To create an easy-to-use HR platform that removes unnecessary enterprise complexity while giving organizations complete control over their HR workflows and data structure.": "不要なエンタープライズの複雑さを排除しつつ、HRワークフローとデータ構造を組織が完全にコントロールできる使いやすいHRプラットフォームを実現すること。",
+                "Technology stack": "技術スタック",
+                "Backend: Node.js": "バックエンド: Node.js",
+                "Frontend: Next.js": "フロントエンド: Next.js",
+                "Database: PostgreSQL": "データベース: PostgreSQL",
+                "Architecture: Cloud-ready & modular": "アーキテクチャ: クラウド対応・モジュール構成",
+                "Design goal: Simple, customizable, scalable": "設計目標: シンプル・カスタマイズ可能・スケーラブル",
+                "Core features": "主要機能",
+                "Employee data management": "従業員データ管理",
+                "Centralized employee database for personal information, roles and departments, employment records, and performance history.": "個人情報、役割・部署、雇用記録、評価履歴を一元管理する従業員データベース。",
+                "Recruitment and candidate tracking": "採用・候補者トラッキング",
+                "Applicant tracking, interview stage management, resume storage, and automated recruitment workflow.": "応募者管理、面接ステージ管理、履歴書保存、採用フロー自動化に対応。",
+                "Employee performance management": "従業員パフォーマンス管理",
+                "KPI and goal tracking, performance reviews, feedback management, and progress analytics.": "KPI・目標管理、評価レビュー、フィードバック管理、進捗分析に対応。",
+                "Employee communication and collaboration": "従業員コミュニケーションと協業",
+                "Team communication, task collaboration, department coordination, and workflow transparency.": "チーム内コミュニケーション、タスク協業、部門連携、ワークフロー可視化を実現。",
+                "Key value": "提供価値",
+                "Simplified HR operations": "HR業務の簡素化",
+                "Full customization control": "完全なカスタマイズ制御",
+                "Cloud accessibility": "クラウドからのアクセス性",
+                "Lightweight performance": "軽量で高速なパフォーマンス",
+                "Business-specific workflow design": "業務特化のワークフロー設計",
+                "Complete CRM and business automation platform": "包括的CRM・業務自動化プラットフォーム",
+                "Unified ecosystem with real-time synchronization across operations, finance, customer engagement, and decision intelligence.": "業務・財務・顧客対応・意思決定をリアルタイム同期で統合するエコシステム。",
+                "Project overview": "プロジェクト概要",
+                "Lienexpos is a comprehensive enterprise-grade CRM and business automation ecosystem designed to centralize and automate multiple business operations within a single unified platform.": "Lienexposは、複数の業務を単一プラットフォームに集約・自動化するために設計された、エンタープライズ向けCRM・業務自動化エコシステムです。",
+                "The system integrates POS, inventory, HRM, accounting, CRM, e-commerce, and analytics into one synchronized environment, enabling organizations to manage operations efficiently with real-time data visibility.": "POS、在庫、HRM、会計、CRM、EC、分析を1つの同期環境に統合し、リアルタイム可視化で効率的な運用管理を実現します。",
+                "Project goals": "プロジェクト目標",
+                "Automate end-to-end business workflows": "業務ワークフローをエンドツーエンドで自動化",
+                "Centralize multi-branch management": "多拠点管理の一元化",
+                "Enable real-time data synchronization": "リアルタイムデータ同期の実現",
+                "Reduce manual operational errors": "手作業による運用ミスの削減",
+                "Provide actionable analytics and reporting": "実行可能な分析とレポート提供",
+                "Support scalable business growth": "スケーラブルな事業成長を支援",
+                "Backend: Ruby on Rails (API architecture)": "バックエンド: Ruby on Rails（APIアーキテクチャ）",
+                "Frontend: Angular": "フロントエンド: Angular",
+                "Database: MySQL": "データベース: MySQL",
+                "Mobile apps: Ionic + Capacitor": "モバイルアプリ: Ionic + Capacitor",
+                "Server: Nginx + Passenger": "サーバー: Nginx + Passenger",
+                "API: RESTful secure APIs": "API: RESTfulセキュアAPI",
+                "Core system modules": "主要システムモジュール",
+                "1. Point of Sale (POS)": "1. POS（販売管理）",
+                "Fast billing, barcode scanning, discount and VAT calculation, multi-payment support, and invoice generation.": "高速会計、バーコード読取、割引・VAT計算、複数決済、請求書発行。",
+                "2. Inventory management": "2. 在庫管理",
+                "Real-time stock monitoring, batch and lot tracking, low-stock alerts, multi-warehouse support, and automatic stock updates.": "在庫のリアルタイム監視、バッチ/ロット追跡、在庫不足アラート、複数倉庫対応、自動在庫更新。",
+                "3. Multi-business and branch management": "3. 複数事業・拠点管理",
+                "Centralized control of multiple businesses, branch performance tracking, and unified reporting dashboards.": "複数事業の一元管理、拠点パフォーマンス追跡、統合レポートダッシュボード。",
+                "4. Purchase management": "4. 購買管理",
+                "Supplier management, purchase order tracking, purchase history, and auto inventory synchronization.": "仕入先管理、発注追跡、購買履歴、在庫自動同期。",
+                "5. HRM (Human Resource Management)": "5. HRM（人材管理）",
+                "Employee database, attendance tracking, payroll processing, leave management, and performance monitoring.": "従業員データ、勤怠管理、給与計算、休暇管理、評価モニタリング。",
+                "6. Accounting and financial management": "6. 会計・財務管理",
+                "Income and expense tracking, profit and loss reports, ledger management, and cash flow monitoring.": "収支管理、損益レポート、台帳管理、キャッシュフロー監視。",
+                "7. Reports and analytics": "7. レポートと分析",
+                "Sales analytics, inventory reports, financial insights, employee performance reports, and BI dashboards.": "売上分析、在庫レポート、財務インサイト、従業員評価レポート、BIダッシュボード。",
+                "8. E-commerce integration": "8. EC連携",
+                "Online order synchronization, web and mobile platform integration, and real-time order tracking.": "オンライン注文同期、Web/モバイル連携、リアルタイム注文追跡。",
+                "9. CRM (Customer Relationship Management)": "9. CRM（顧客関係管理）",
+                "Customer database, purchase history tracking, offers and discount management, and engagement tools.": "顧客データベース、購入履歴管理、オファー・割引管理、顧客エンゲージメント機能。",
+                "10. Mobile and remote access": "10. モバイル・リモートアクセス",
+                "Remote system monitoring, mobile-friendly dashboards, and live business tracking.": "リモート監視、モバイル対応ダッシュボード、ライブ事業トラッキング。",
+                "11. Security and role management": "11. セキュリティと権限管理",
+                "Role-based access control, secure authentication, and data privacy protection.": "ロールベースアクセス制御、安全な認証、データプライバシー保護。",
+                "Advanced integrated applications": "高度な統合アプリケーション",
+                "Syncher app": "Syncherアプリ",
+                "Real-time synchronization engine that syncs POS with the central database, maintains online and offline consistency, and applies automatic data updates.": "POSと中央データベースを同期し、オンライン/オフライン整合性を維持するリアルタイム同期エンジン。",
+                "Admin mobile app": "管理者モバイルアプリ",
+                "Live sales analytics, profit and expense monitoring, and real-time decision support.": "ライブ売上分析、利益・費用監視、リアルタイム意思決定支援。",
+                "Order management app": "注文管理アプリ",
+                "Order lifecycle management and fulfillment tracking.": "注文ライフサイクル管理とフルフィルメント追跡。",
+                "Membership app": "会員アプリ",
+                "Customer loyalty programs, OTP authentication, and promotional management.": "顧客ロイヤルティプログラム、OTP認証、プロモーション管理。",
+                "Key business value": "ビジネス価値",
+                "Centralized business ecosystem": "ビジネスエコシステムの一元化",
+                "Real-time cross-platform synchronization": "クロスプラットフォームのリアルタイム同期",
+                "Reduced manual workload": "手作業負荷の削減",
+                "Scalable enterprise architecture": "スケーラブルなエンタープライズ設計",
+                "Data-driven decision making": "データドリブンな意思決定",
+                "Target use cases": "対象ユースケース",
+                "Retail and super shops": "小売店・スーパーマーケット",
+                "Restaurants": "レストラン",
+                "Pharmacies": "薬局",
+                "Agro businesses": "農業関連事業",
+                "Fuel stations": "ガソリンスタンド",
+                "Multi-branch enterprises": "多拠点企業",
+                "Short portfolio description": "ポートフォリオ短縮説明",
+                "Lienexpos is an enterprise-level CRM and business automation platform integrating POS, inventory, HRM, accounting, and e-commerce into a unified ecosystem with real-time synchronization and analytics-driven decision support.": "Lienexposは、POS、在庫、HRM、会計、ECを統合し、リアルタイム同期と分析に基づく意思決定支援を備えたエンタープライズ向けCRM・業務自動化プラットフォームです。",
+                "Hey Wanna Start Something Great?": "素晴らしいプロジェクトを始めませんか？",
+                "Got an idea? Let’s chat on WhatsApp or jump on a quick call.": "アイデアはありますか？WhatsAppで相談するか、短いお電話でお話ししましょう。",
+                "Ask Questions": "質問する",
+                "Book a Call": "通話を予約",
+                "Your Name": "お名前",
+                "Last Name": "姓",
+                "Company Name": "会社名",
+                "Your Email": "メールアドレス",
+                "Service": "サービス",
+                "Custom Software": "カスタムソフトウェア",
+                "Desktop Application": "デスクトップアプリケーション",
+                "Mobile App": "モバイルアプリ",
+                "Designing": "デザイン",
+                "Business Automation": "業務自動化",
+                "Budget": "予算",
+                "Consultation Free": "無料相談",
+                "Tell us more about idea!": "アイデアの詳細をお聞かせください！",
+                "Submit": "送信",
+                "Company": "会社情報",
+                "About Us": "私たちについて",
+                "Services": "サービス",
+                "Latest News": "最新ニュース",
+                "Support": "サポート",
+                "FAQ's": "よくある質問",
+                "Privacy Policy": "プライバシーポリシー",
+                "Terms & Condition": "利用規約",
+                "Community": "コミュニティ",
+                "Address": "住所",
+                "Sarker Siivoukseen": "Sarker Siivoukseen",
+                "Close": "閉じる",
+                "More Details": "詳細を見る",
+                "Select language": "言語を選択",
+                "Language": "言語"
+            };
+
+            function getReverseTranslations(map) {
+                var reversed = {};
+                Object.keys(map).forEach(function (key) {
+                    reversed[map[key]] = key;
+                });
+                return reversed;
+            }
+
+            var enTranslations = getReverseTranslations(jaTranslations);
+
+            function translateTextNodes(translations) {
+                var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+                    acceptNode: function (node) {
+                        if (!node || !node.nodeValue || !node.nodeValue.trim()) {
+                            return NodeFilter.FILTER_REJECT;
+                        }
+                        if (!node.parentElement) {
+                            return NodeFilter.FILTER_REJECT;
+                        }
+                        var tagName = node.parentElement.tagName;
+                        if (tagName === "SCRIPT" || tagName === "STYLE") {
+                            return NodeFilter.FILTER_REJECT;
+                        }
+                        return NodeFilter.FILTER_ACCEPT;
+                    }
+                });
+
+                var node;
+                while ((node = walker.nextNode())) {
+                    var value = node.nodeValue;
+                    var trimmed = value.trim();
+                    if (!trimmed || !translations[trimmed]) {
+                        continue;
+                    }
+                    var leading = value.match(/^\s*/)[0];
+                    var trailing = value.match(/\s*$/)[0];
+                    node.nodeValue = leading + translations[trimmed] + trailing;
+                }
+            }
+
+            function translateAttributes(translations) {
+                var attrNames = ["placeholder", "title", "aria-label"];
+                var selector = "[placeholder], [title], [aria-label]";
+                var elements = document.querySelectorAll(selector);
+
+                elements.forEach(function (el) {
+                    attrNames.forEach(function (attr) {
+                        var current = el.getAttribute(attr);
+                        if (current && translations[current]) {
+                            el.setAttribute(attr, translations[current]);
+                        }
+                    });
+                });
+            }
+
+            function applyLanguage(lang) {
+                var translations = lang === "ja" ? jaTranslations : enTranslations;
+                translateTextNodes(translations);
+                translateAttributes(translations);
+                document.documentElement.lang = lang;
+            }
+
+            function detectDefaultLanguage() {
+                var saved = localStorage.getItem("preferredLanguage");
+                if (saved === "ja" || saved === "en") {
+                    return saved;
+                }
+                var timezone = (Intl.DateTimeFormat().resolvedOptions().timeZone || "").toLowerCase();
+                var language = (navigator.language || "").toLowerCase();
+                var languages = (navigator.languages || []).join(",").toLowerCase();
+                var isJapan = timezone.indexOf("asia/tokyo") !== -1 || language.indexOf("ja") === 0 || languages.indexOf("ja") !== -1;
+                return isJapan ? "ja" : "en";
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                var languageSelect = document.getElementById("languageSelect");
+                if (!languageSelect) {
+                    return;
+                }
+
+                var initialLanguage = detectDefaultLanguage();
+                languageSelect.value = initialLanguage;
+                applyLanguage(initialLanguage);
+
+                languageSelect.addEventListener("change", function (event) {
+                    var selected = event.target.value === "ja" ? "ja" : "en";
+                    localStorage.setItem("preferredLanguage", selected);
+                    applyLanguage(selected);
+                });
+            });
+        })();
+    </script>
     <script type="text/javascript">
 
         //====== counter up 
