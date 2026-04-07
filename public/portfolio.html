@@ -88,6 +88,18 @@
             .portfolio .portfolio-item.lienexpos-card .portfolio-info p {
                 color: #fff;
             }
+            .portfolio .portfolio-item.ecommerce-ai-card .portfolio-info h4,
+            .portfolio .portfolio-item.ecommerce-ai-card .portfolio-info p,
+            .portfolio .portfolio-item.ecommerce-ai-card .portfolio-info .details-link,
+            .portfolio .portfolio-item.ecommerce-ai-card .portfolio-info .details-link i {
+                color: #fff;
+            }
+            .portfolio .portfolio-item.b2b-ai-card .portfolio-info h4,
+            .portfolio .portfolio-item.b2b-ai-card .portfolio-info p,
+            .portfolio .portfolio-item.b2b-ai-card .portfolio-info .details-link,
+            .portfolio .portfolio-item.b2b-ai-card .portfolio-info .details-link i {
+                color: #fff;
+            }
             .language-switcher {
                 min-width: 135px;
             }
@@ -184,6 +196,131 @@
             }
             .portfolio-modal-list li {
                 margin-bottom: 0.5rem;
+            }
+            .portfolio-process-grid {
+                position: relative;
+            }
+            .portfolio-process-flow {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            @media (min-width: 992px) {
+                .portfolio-process-flow {
+                    grid-template-columns: repeat(5, minmax(0, 1fr));
+                }
+            }
+            .portfolio-process-card {
+                height: 100%;
+                padding: 1rem 1rem 1.1rem;
+                border-radius: 18px;
+                color: #fff;
+                box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+            }
+            .portfolio-process-card h6,
+            .portfolio-process-card p {
+                color: #fff;
+            }
+            .portfolio-process-card p {
+                margin-bottom: 0;
+                line-height: 1.6;
+            }
+            .portfolio-process-step {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.18);
+                color: #fff;
+                font-weight: 800;
+                margin-bottom: 0.75rem;
+            }
+            .portfolio-process-card-1 { background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%); }
+            .portfolio-process-card-2 { background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%); }
+            .portfolio-process-card-3 { background: linear-gradient(135deg, #b45309 0%, #f59e0b 100%); }
+            .portfolio-process-card-4 { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); }
+            .portfolio-process-card-5 { background: linear-gradient(135deg, #be123c 0%, #fb7185 100%); }
+            .success-kpi-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+            @media (min-width: 768px) {
+                .success-kpi-grid {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+            }
+            .success-kpi-card {
+                border: 1px solid rgba(15, 23, 42, 0.08);
+                border-radius: 14px;
+                background: #f8fafc;
+                padding: 0.9rem 1rem;
+            }
+            .success-kpi-title {
+                margin: 0;
+                color: #334155;
+                font-size: 0.92rem;
+                font-weight: 600;
+            }
+            .success-kpi-value {
+                display: block;
+                margin-top: 0.35rem;
+                margin-bottom: 0.55rem;
+                color: #0f172a;
+                font-size: 1.15rem;
+                font-weight: 800;
+            }
+            .success-kpi-bar {
+                width: 100%;
+                height: 8px;
+                background: #e2e8f0;
+                border-radius: 999px;
+                overflow: hidden;
+            }
+            .success-kpi-fill {
+                height: 100%;
+                border-radius: 999px;
+                background: linear-gradient(90deg, #2563eb 0%, #14b8a6 100%);
+            }
+            .success-kpi-note {
+                margin-top: 0.35rem;
+                margin-bottom: 0;
+                color: #64748b;
+                font-size: 0.84rem;
+            }
+            .future-goal-roadmap {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0.85rem;
+            }
+            .future-goal-item {
+                display: flex;
+                gap: 0.75rem;
+                align-items: flex-start;
+                padding: 0.85rem 0.9rem;
+                border: 1px solid rgba(15, 23, 42, 0.08);
+                border-radius: 14px;
+                background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+            }
+            .future-goal-icon {
+                flex: 0 0 2rem;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 999px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                background: linear-gradient(135deg, #1d4ed8 0%, #0f766e 100%);
+                box-shadow: 0 8px 18px rgba(37, 99, 235, 0.24);
+            }
+            .future-goal-item h6 {
+                margin-bottom: 0.35rem;
+            }
+            .future-goal-item p {
+                margin-bottom: 0;
             }
     </style>
 
@@ -303,7 +440,9 @@
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-web">Web</li>
             <li data-filter=".filter-app">Apps</li>
-            <li data-filter=".filter-game">Game</li>
+                        <li data-filter=".filter-game">Games</li>
+                        <li data-filter=".filter-ai-projects">AI Projects</li>
+                        <li data-filter=".filter-upcoming">Upcoming</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -328,6 +467,32 @@
                         <h4>Lienexpos</h4>
                         <p>Enterprise CRM and business automation ecosystem integrating POS, inventory, HRM, accounting, and e-commerce.</p>
                         <button type="button" class="details-link btn p-0 border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#lienexposModal" title="More Details" aria-label="Open Lienexpos details">
+                            <i class="lni lni-link"></i>
+                        </button>
+                    </div>
+                </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai-projects filter-upcoming b2b-ai-card">
+                <div class="isotope-item-content">
+                    <img src="assets/images/portfolio/b2b-marketing.png" class="img-fluid" alt="AI-powered automated B2B marketing and outreach platform">
+                    <div class="portfolio-info">
+                        <h4>AI-Powered B2B Marketing Platform</h4>
+                        <p>AI-driven lead discovery, personalized outreach, smart scheduling, and contact form automation for B2B campaigns.</p>
+                        <button type="button" class="details-link btn p-0 border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#b2bMarketingModal" title="More Details" aria-label="Open AI-Powered B2B Marketing Platform details">
+                            <i class="lni lni-link"></i>
+                        </button>
+                    </div>
+                </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai-projects filter-upcoming ecommerce-ai-card">
+                <div class="isotope-item-content">
+                    <img src="assets/images/portfolio/ecommerce.png" class="img-fluid" alt="AI-driven autonomous e-commerce automation platform">
+                    <div class="portfolio-info">
+                        <h4>AI Autonomous E-Commerce Operations Platform</h4>
+                        <p>AI-managed commerce operations for product discovery, order flow, inventory intelligence, and purchase recommendations.</p>
+                        <button type="button" class="details-link btn p-0 border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#ecommerceAutomationModal" title="More Details" aria-label="Open AI Autonomous E-Commerce Operations Platform details">
                             <i class="lni lni-link"></i>
                         </button>
                     </div>
@@ -537,6 +702,217 @@
     </section>
     <!-- /Portfolio Section -->
 
+        <div class="modal fade portfolio-modal" id="b2bMarketingModal" tabindex="-1" aria-labelledby="b2bMarketingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-4" id="b2bMarketingModalLabel">AI-Powered B2B Marketing Platform</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="portfolio-modal-cover">
+                            <img src="assets/images/portfolio/b2b-marketing.png" alt="AI-powered automated B2B marketing and outreach platform cover">
+                            <div class="portfolio-modal-cover-caption">
+                                <h5>Intelligent lead discovery and outreach automation</h5>
+                                <p>An AI-driven platform for discovering prospects, generating personalized outreach, and automating campaign delivery through email and contact forms.</p>
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="portfolio-modal-section">
+                                    <h5 class="mb-3">Project overview</h5>
+                                    <p>This project is an AI-driven marketing automation platform designed to help businesses perform targeted B2B outreach at scale by automatically discovering companies within a specific market segment and executing personalized communication campaigns through email and website contact forms.</p>
+                                    <p>The system combines lead discovery, AI content generation, workflow scheduling, and automated outreach execution to reduce manual marketing effort while maintaining delivery accuracy and personalization.</p>
+                                    <p class="mb-0">For a client, this means a single platform that can identify qualified prospects, understand the context of each business, generate relevant outreach, and manage campaign execution with clear visibility into what was sent, what failed, and what needs follow-up.</p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="portfolio-modal-section">
+                                    <h5 class="mb-3">Business process chart</h5>
+                                    <p class="mb-4">The platform follows a simple business flow: understand the market, choose the right companies, send the right message, and measure the response so the next campaign gets better.</p>
+                                    <div class="portfolio-process-grid">
+                                        <div class="portfolio-process-flow">
+                                            <div class="portfolio-process-card portfolio-process-card-1">
+                                                <div class="portfolio-process-step">1</div>
+                                                <h6 class="mb-2">Set the campaign goal</h6>
+                                                <p>Choose the service, target industry, location, and the business result you want to achieve.</p>
+                                            </div>
+                                            <div class="portfolio-process-card portfolio-process-card-2">
+                                                <div class="portfolio-process-step">2</div>
+                                                <h6 class="mb-2">Find the right businesses</h6>
+                                                <p>The system looks for companies that match the target profile and collects their websites and contact details.</p>
+                                            </div>
+                                            <div class="portfolio-process-card portfolio-process-card-3">
+                                                <div class="portfolio-process-step">3</div>
+                                                <h6 class="mb-2">Understand each prospect</h6>
+                                                <p>The platform reviews the company website and available business signals to prepare a message that feels relevant.</p>
+                                            </div>
+                                            <div class="portfolio-process-card portfolio-process-card-4">
+                                                <div class="portfolio-process-step">4</div>
+                                                <h6 class="mb-2">Create the outreach message</h6>
+                                                <p>It writes a personalized email or contact form message that matches the company’s needs and tone.</p>
+                                            </div>
+                                            <div class="portfolio-process-card portfolio-process-card-5">
+                                                <div class="portfolio-process-step">5</div>
+                                                <h6 class="mb-2">Send, monitor, improve</h6>
+                                                <p>Messages go out on a planned schedule, then the team can see what worked, what failed, and what to follow up on.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Core capabilities</h5>
+                                    <ul class="portfolio-modal-list">
+                                        <li>Lead discovery by industry, location, and keywords</li>
+                                        <li>Website and contact data extraction</li>
+                                        <li>AI-generated personalized email campaigns</li>
+                                        <li>Bulk outreach campaign management</li>
+                                        <li>Smart time scheduling and follow-ups</li>
+                                        <li>Contact form automation for selected sites</li>
+                                        <li>Delivery monitoring and failure diagnostics</li>
+                                        <li>Opt-out, throttling, and reputation-safe sending controls</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Technical stack</h5>
+                                    <div class="portfolio-modal-tag">Backend: Node.js / Golang microservices</div>
+                                    <div class="portfolio-modal-tag">Queue workers: Redis / RabbitMQ</div>
+                                    <div class="portfolio-modal-tag">AI layer: LLM content generation</div>
+                                    <div class="portfolio-modal-tag">RAG pipeline: Retrieval-augmented generation</div>
+                                    <div class="portfolio-modal-tag">Vector search: Embeddings + vector database</div>
+                                    <div class="portfolio-modal-tag">Orchestration: LangChain</div>
+                                    <div class="portfolio-modal-tag">Workflow graphs: LangGraph</div>
+                                    <div class="portfolio-modal-tag">Automation: Headless Chromium / Playwright</div>
+                                    <div class="portfolio-modal-tag">Database: PostgreSQL</div>
+                                    <div class="portfolio-modal-tag">Search: Elasticsearch</div>
+                                    <div class="portfolio-modal-tag">Lead indexing: Structured CRM-style records</div>
+                                    <div class="portfolio-modal-tag">Analytics: Campaign delivery tracking</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="portfolio-modal-section">
+                                    <h5 class="mb-3">Business value</h5>
+                                    <div class="row g-3">
+                                        <div class="col-lg-4">
+                                            <p class="mb-0">Reduces manual marketing effort by automating lead discovery, research, and outreach execution.</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <p class="mb-0">Improves targeting precision through filtering, validation, RAG-based context, and AI-assisted personalization.</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <p class="mb-0">Provides campaign visibility with delivery tracking, failure diagnostics, engagement analytics, and follow-up control.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Success ratio from similar projects</h5>
+                                    <p class="mb-3">Based on similar outreach automation projects and campaign benchmarks:</p>
+                                    <div class="success-kpi-grid">
+                                        <div class="success-kpi-card">
+                                            <p class="success-kpi-title">Lead qualification accuracy</p>
+                                            <span class="success-kpi-value">80% to 90%</span>
+                                            <div class="success-kpi-bar"><div class="success-kpi-fill" style="width: 85%;"></div></div>
+                                            <p class="success-kpi-note">Higher-quality lead lists reduce wasted outreach and improve meeting quality.</p>
+                                        </div>
+                                        <div class="success-kpi-card">
+                                            <p class="success-kpi-title">Email and form submission success</p>
+                                            <span class="success-kpi-value">Around 85%</span>
+                                            <div class="success-kpi-bar"><div class="success-kpi-fill" style="width: 85%;"></div></div>
+                                            <p class="success-kpi-note">Strong deliverability and form completion performance across targeted campaigns.</p>
+                                        </div>
+                                        <div class="success-kpi-card">
+                                            <p class="success-kpi-title">Manual outreach workload reduction</p>
+                                            <span class="success-kpi-value">Up to 90%</span>
+                                            <div class="success-kpi-bar"><div class="success-kpi-fill" style="width: 90%;"></div></div>
+                                            <p class="success-kpi-note">Teams save time by automating prospect research, messaging, and follow-up operations.</p>
+                                        </div>
+                                        <div class="success-kpi-card">
+                                            <p class="success-kpi-title">Response-rate uplift from personalization</p>
+                                            <span class="success-kpi-value">20% to 35%</span>
+                                            <div class="success-kpi-bar"><div class="success-kpi-fill" style="width: 35%;"></div></div>
+                                            <p class="success-kpi-note">Personalized context improves engagement and reply quality versus generic outreach.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Our future goal</h5>
+                                    <p class="mb-3">We are planning to extend this platform into a complete AI revenue engine for B2B growth teams.</p>
+                                    <p class="mb-3">Our roadmap is focused on helping business teams move from manual outreach to a predictable, measurable pipeline engine.</p>
+                                    <div class="future-goal-roadmap mb-3">
+                                        <div class="future-goal-item">
+                                            <div class="future-goal-icon"><i class="lni lni-target"></i></div>
+                                            <div>
+                                                <h6>Intent-based lead scoring</h6>
+                                                <p>Automatically rank prospects by buying signals and engagement intent, so sales teams focus on leads that are most likely to convert.</p>
+                                            </div>
+                                        </div>
+                                        <div class="future-goal-item">
+                                            <div class="future-goal-icon"><i class="lni lni-timer"></i></div>
+                                            <div>
+                                                <h6>Best send-time intelligence</h6>
+                                                <p>Predict the most effective send window for each segment using campaign behavior patterns to improve open, click, and reply rates.</p>
+                                            </div>
+                                        </div>
+                                        <div class="future-goal-item">
+                                            <div class="future-goal-icon"><i class="lni lni-network"></i></div>
+                                            <div>
+                                                <h6>Multichannel journey automation</h6>
+                                                <p>Coordinate outreach across email, LinkedIn, and call tasks so each lead receives a consistent journey instead of disconnected follow-ups.</p>
+                                            </div>
+                                        </div>
+                                        <div class="future-goal-item">
+                                            <div class="future-goal-icon"><i class="lni lni-bar-chart"></i></div>
+                                            <div>
+                                                <h6>Executive revenue dashboards</h6>
+                                                <p>Give leadership a live view of ROI, CAC trend, pipeline contribution, and campaign efficiency for faster budget and strategy decisions.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h6 class="mb-2">Expected client impact</h6>
+                                    <ul class="portfolio-modal-list mb-0">
+                                        <li>Higher conversion quality and lower wasted outreach</li>
+                                        <li>Faster campaign learning cycles and better decision speed</li>
+                                        <li>More predictable revenue pipeline growth</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">How the AI layer works</h5>
+                                    <ul class="portfolio-modal-list">
+                                        <li>Retrieves campaign context, lead profile data, and website signals before writing.</li>
+                                        <li>Uses embeddings and vector search to match the right message to the right company context.</li>
+                                        <li>Combines LangChain tools and LangGraph workflows to keep generation, validation, and follow-up steps connected.</li>
+                                        <li>Produces outreach that feels specific to the prospect instead of generic mass marketing.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">What the client gets</h5>
+                                    <ul class="portfolio-modal-list">
+                                        <li>A curated list of qualified businesses instead of raw scraped data.</li>
+                                        <li>Context-aware email and form messages that can be reused across campaigns.</li>
+                                        <li>A governed outreach workflow with scheduling, throttling, and follow-up rules.</li>
+                                        <li>Clear reporting on sent, failed, bounced, and completed outreach actions.</li>
+                                        <li>A scalable foundation that can grow from a single niche campaign to multiple markets.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="modal fade portfolio-modal" id="cloudHrTrackModal" tabindex="-1" aria-labelledby="cloudHrTrackModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
                 <div class="modal-content">
@@ -607,6 +983,124 @@
                                         <li>Lightweight performance</li>
                                         <li>Business-specific workflow design</li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade portfolio-modal" id="ecommerceAutomationModal" tabindex="-1" aria-labelledby="ecommerceAutomationModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-4" id="ecommerceAutomationModalLabel">AI Autonomous E-Commerce Operations Platform</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="portfolio-modal-cover">
+                            <img src="assets/images/portfolio/ecommerce.png" alt="AI-driven autonomous e-commerce automation platform cover">
+                            <div class="portfolio-modal-cover-caption">
+                                <h5>End-to-end intelligent commerce management</h5>
+                                <p>A self-operating e-commerce automation platform where AI handles search, orders, inventory decisions, and internal operations communication.</p>
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="portfolio-modal-section">
+                                    <h5 class="mb-3">Project overview</h5>
+                                    <p>This project is an AI-powered e-commerce automation platform designed to run the complete operational lifecycle of an online store, from product discovery and checkout to stock monitoring, team communication, and purchase planning.</p>
+                                    <p class="mb-0">Instead of manual coordination between teams, AI acts as a digital operations manager that improves speed, consistency, and decision quality across daily commerce workflows.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Core vision</h5>
+                                    <ul class="portfolio-modal-list mb-0">
+                                        <li>Customers discover products through AI-powered intent search.</li>
+                                        <li>Orders are processed and routed automatically.</li>
+                                        <li>Managers receive real-time operational insights.</li>
+                                        <li>Inventory decisions are generated with AI predictions.</li>
+                                        <li>Daily store operations run via automated communication workflows.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">System architecture</h5>
+                                    <ul class="portfolio-modal-list mb-0">
+                                        <li>AI Product Discovery Engine</li>
+                                        <li>Smart Shopping Experience Layer</li>
+                                        <li>Order Processing Automation Engine</li>
+                                        <li>Operational Notification System</li>
+                                        <li>Inventory Intelligence Engine</li>
+                                        <li>AI Purchase Recommendation Module</li>
+                                        <li>Executive AI Summary Dashboard</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="portfolio-modal-section">
+                                    <h5 class="mb-3">Automation workflow highlights</h5>
+                                    <div class="row g-3">
+                                        <div class="col-lg-4">
+                                            <h6 class="mb-2">1) AI product search</h6>
+                                            <p class="mb-0">Natural-language and semantic search understands customer intent and returns highly relevant product suggestions.</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <h6 class="mb-2">2) Intelligent shopping flow</h6>
+                                            <p class="mb-0">AI-enhanced cart, checkout, upsell, and cross-sell logic continuously optimizes conversion outcomes.</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <h6 class="mb-2">3) Automated order processing</h6>
+                                            <p class="mb-0">Orders are auto-registered, prioritized, assigned to workflows, and routed to responsible team members.</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <h6 class="mb-2">4) Operational communication</h6>
+                                            <p class="mb-0">Product, store, and customer managers receive automated summaries, trend alerts, and escalation notifications.</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <h6 class="mb-2">5) Inventory intelligence</h6>
+                                            <p class="mb-0">AI monitors stock health, detects stock-out risk, predicts demand spikes, and flags emergency restock needs.</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <h6 class="mb-2">6) Purchase recommendation</h6>
+                                            <p class="mb-0">When thresholds are reached, AI generates purchase summaries, quantity estimates, and supplier plan recommendations.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Technical stack</h5>
+                                    <div class="portfolio-modal-tag">Frontend: React.js / Next.js</div>
+                                    <div class="portfolio-modal-tag">Backend: Node.js / Golang services</div>
+                                    <div class="portfolio-modal-tag">Architecture: Event-driven + REST + queue workers</div>
+                                    <div class="portfolio-modal-tag">AI models: Recommendation + NLP semantic search</div>
+                                    <div class="portfolio-modal-tag">AI engines: Demand prediction + automation agents</div>
+                                    <div class="portfolio-modal-tag">Data: PostgreSQL + Redis + Elasticsearch</div>
+                                    <div class="portfolio-modal-tag">Automation: Background workers + notification microservices</div>
+                                    <div class="portfolio-modal-tag">Infra: Docker + Kubernetes + cloud message queues</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="portfolio-modal-section h-100">
+                                    <h5 class="mb-3">Business impact</h5>
+                                    <ul class="portfolio-modal-list mb-0">
+                                        <li>Reduces manual operational workload across store teams.</li>
+                                        <li>Prevents stock shortages through predictive restock automation.</li>
+                                        <li>Improves order handling speed and process consistency.</li>
+                                        <li>Enables smarter inventory and purchasing decisions.</li>
+                                        <li>Automates internal communication and priority alerts.</li>
+                                        <li>Transforms e-commerce management into AI-driven operations.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="portfolio-modal-section">
+                                    <h5 class="mb-3">Key innovation</h5>
+                                    <p class="mb-0">Traditional commerce systems focus on transactions. This platform introduces AI as an autonomous business operator that coordinates customers, inventory, staff communication, and purchasing decisions as one connected intelligence layer.</p>
                                 </div>
                             </div>
                         </div>
@@ -1017,7 +1511,7 @@
                                         </li>
                                         <li ><a href="javascript:void(0)" class="footer-address">
                                                 <span><i class="fa-solid fa-envelope"></i></span>
-                                                
+
                                                 <p>info@cloudproductio.com</br> admin@clouoductio.com</p>
                                             </a>
                                         </li>
@@ -1086,8 +1580,122 @@
                 "Web": "Web",
                 "Apps": "アプリ",
                 "Game": "ゲーム",
+                "Games": "ゲーム",
+                "AI Projects": "AIプロジェクト",
+                "Upcoming": "近日公開",
                 "Cloud-based HR platform for simpler employee management, workflow transparency, and team alignment.": "よりシンプルな従業員管理、業務の可視化、チーム連携を実現するクラウド型HRプラットフォーム。",
                 "Enterprise CRM and business automation ecosystem integrating POS, inventory, HRM, accounting, and e-commerce.": "POS、在庫、HRM、会計、ECを統合したエンタープライズ向けCRM・業務自動化エコシステム。",
+                "AI-Powered B2B Marketing Platform": "AI搭載B2Bマーケティングプラットフォーム",
+                "AI-driven lead discovery, personalized outreach, smart scheduling, and contact form automation for B2B campaigns.": "B2Bキャンペーン向けのAIによるリード発見、個別最適化されたアウトリーチ、スマートスケジューリング、問い合わせフォーム自動化。",
+                "AI Autonomous E-Commerce Operations Platform": "AI自律型Eコマース運用プラットフォーム",
+                "AI-managed commerce operations for product discovery, order flow, inventory intelligence, and purchase recommendations.": "商品発見、受注処理、在庫インテリジェンス、発注提案までをAIが管理するEコマース運用基盤。",
+                "End-to-end intelligent commerce management": "エンドツーエンドのインテリジェント商取引管理",
+                "A self-operating e-commerce automation platform where AI handles search, orders, inventory decisions, and internal operations communication.": "検索、受注、在庫判断、社内オペレーション連携までAIが担う自律型Eコマース自動化プラットフォーム。",
+                "Core vision": "中核ビジョン",
+                "System architecture": "システムアーキテクチャ",
+                "Automation workflow highlights": "自動化ワークフローの要点",
+                "AI product search": "AI商品検索",
+                "Intelligent shopping flow": "インテリジェント購買フロー",
+                "Automated order processing": "受注処理自動化",
+                "Operational communication": "オペレーション連携",
+                "Inventory intelligence": "在庫インテリジェンス",
+                "Purchase recommendation": "発注レコメンド",
+                "Key innovation": "主な革新性",
+                "Intelligent lead discovery and outreach automation": "インテリジェントなリード発見とアウトリーチ自動化",
+                "Project overview": "プロジェクト概要",
+                "Business process chart": "業務フローチャート",
+                "The platform follows a simple business flow: understand the market, choose the right companies, send the right message, and measure the response so the next campaign gets better.": "このプラットフォームは、業界を理解し、適切な企業を選び、適切なメッセージを送り、その反応を測定して次のキャンペーンを改善する、シンプルな業務フローで進みます。",
+                "Set the campaign goal": "キャンペーン目標を決める",
+                "Choose the service, target industry, location, and the business result you want to achieve.": "サービス、対象業界、地域、そして達成したいビジネス成果を決めます。",
+                "Find the right businesses": "適切な企業を見つける",
+                "The system looks for companies that match the target profile and collects their websites and contact details.": "対象条件に合う企業を探し、Webサイトや連絡先情報を集めます。",
+                "Understand each prospect": "各見込み客を理解する",
+                "The platform reviews the company website and available business signals to prepare a message that feels relevant.": "プラットフォームが企業のWebサイトや関連情報を確認し、相手に合った内容を準備します。",
+                "Create the outreach message": "アプローチ文面を作成する",
+                "It writes a personalized email or contact form message that matches the company’s needs and tone.": "企業の状況や雰囲気に合った、個別最適化されたメールや問い合わせ文面を作成します。",
+                "Send, monitor, improve": "送信し、確認し、改善する",
+                "Messages go out on a planned schedule, then the team can see what worked, what failed, and what to follow up on.": "計画したスケジュールで送信し、その後、何が成功し、何が失敗し、何をフォローアップすべきかを確認できます。",
+                "Core capabilities": "主要機能",
+                "Technical stack": "技術スタック",
+                "Business value": "ビジネス価値",
+                "Success ratio from similar projects": "類似プロジェクトの成功率",
+                "Based on similar outreach automation projects and campaign benchmarks:": "類似するアウトリーチ自動化プロジェクトとキャンペーン実績に基づく指標です。",
+                "Lead qualification accuracy: 80% to 90%": "リード選定精度: 80%〜90%",
+                "Email and form submission success: around 85%": "メール・フォーム送信成功率: 約85%",
+                "Manual outreach workload reduction: up to 90%": "手作業アウトリーチ工数削減: 最大90%",
+                "Response-rate uplift from personalization: 20% to 35%": "パーソナライズによる返信率向上: 20%〜35%",
+                "Lead qualification accuracy": "リード選定精度",
+                "80% to 90%": "80%〜90%",
+                "Higher-quality lead lists reduce wasted outreach and improve meeting quality.": "精度の高いリードリストにより、無駄なアプローチを減らし、商談の質を向上できます。",
+                "Email and form submission success": "メール・フォーム送信成功率",
+                "Around 85%": "約85%",
+                "Strong deliverability and form completion performance across targeted campaigns.": "ターゲットキャンペーン全体で、高い配信到達率とフォーム完了率を実現します。",
+                "Manual outreach workload reduction": "手作業アウトリーチ工数削減",
+                "Up to 90%": "最大90%",
+                "Teams save time by automating prospect research, messaging, and follow-up operations.": "見込み客調査、文面作成、フォローアップを自動化し、チームの時間を大幅に削減します。",
+                "Response-rate uplift from personalization": "パーソナライズによる返信率向上",
+                "20% to 35%": "20%〜35%",
+                "Personalized context improves engagement and reply quality versus generic outreach.": "文脈に合わせたパーソナライズにより、一般的な一斉送信より反応率と返信品質が向上します。",
+                "Our future goal": "今後の目標",
+                "We are planning to extend this platform into a complete AI revenue engine for B2B growth teams.": "このプラットフォームを、B2B成長チーム向けの包括的なAI売上成長エンジンへ拡張する計画です。",
+                "Our roadmap is focused on helping business teams move from manual outreach to a predictable, measurable pipeline engine.": "私たちのロードマップは、業務チームが手作業のアウトリーチから、予測可能で測定可能なパイプライン運用へ移行できるよう支援することに重点を置いています。",
+                "Intent-based lead scoring": "意図ベースのリードスコアリング",
+                "Automatically rank prospects by buying signals and engagement intent, so sales teams focus on leads that are most likely to convert.": "購買シグナルや関心度に基づいて見込み客を自動評価し、営業チームが成約可能性の高いリードに集中できるようにします。",
+                "Best send-time intelligence": "最適送信タイミング最適化",
+                "Predict the most effective send window for each segment using campaign behavior patterns to improve open, click, and reply rates.": "キャンペーン行動パターンを活用してセグメントごとの最適送信時間を予測し、開封率・クリック率・返信率の向上を目指します。",
+                "Multichannel journey automation": "マルチチャネルジャーニー自動化",
+                "Coordinate outreach across email, LinkedIn, and call tasks so each lead receives a consistent journey instead of disconnected follow-ups.": "メール、LinkedIn、架電タスクを連携し、断続的なフォローではなく一貫した顧客導線を提供します。",
+                "Executive revenue dashboards": "経営向け収益ダッシュボード",
+                "Give leadership a live view of ROI, CAC trend, pipeline contribution, and campaign efficiency for faster budget and strategy decisions.": "ROI、CAC推移、パイプライン貢献度、キャンペーン効率をリアルタイムに可視化し、経営判断の迅速化を支援します。",
+                "Expected client impact": "想定される導入効果",
+                "Higher conversion quality and lower wasted outreach": "成約品質の向上と無駄なアプローチの削減",
+                "Faster campaign learning cycles and better decision speed": "学習サイクルの高速化と意思決定スピードの向上",
+                "More predictable revenue pipeline growth": "より予測可能な売上パイプライン成長",
+                "Add intent-based lead scoring for higher conversion quality": "意図ベースのリードスコアリングを追加し、成約品質を向上",
+                "Predict best send-time using campaign behavior patterns": "キャンペーン行動パターンをもとに最適送信時間を予測",
+                "Support multichannel outreach (email, LinkedIn, and call tasks)": "マルチチャネル対応（メール、LinkedIn、架電タスク）",
+                "Build executive dashboards for ROI, CAC trend, and pipeline impact": "ROI、CAC推移、パイプライン影響を可視化する経営ダッシュボードを構築",
+                "How the AI layer works": "AIレイヤーの仕組み",
+                "What the client gets": "クライアントが得られるもの",
+                "This project is an AI-driven marketing automation platform designed to help businesses perform targeted B2B outreach at scale by automatically discovering companies within a specific market segment and executing personalized communication campaigns through email and website contact forms.": "このプロジェクトは、特定の市場セグメント内の企業を自動的に発見し、メールやWebサイトの問い合わせフォームを通じてパーソナライズされたコミュニケーションキャンペーンを実行することで、企業のターゲットB2Bアウトリーチを大規模に支援するAI駆動のマーケティング自動化プラットフォームです。",
+                "The system combines lead discovery, AI content generation, workflow scheduling, and automated outreach execution to reduce manual marketing effort while maintaining delivery accuracy and personalization.": "このシステムは、リード発見、AIコンテンツ生成、ワークフローのスケジューリング、自動アウトリーチ実行を組み合わせ、配信精度とパーソナライズを維持しながら手作業のマーケティング負荷を軽減します。",
+                "For a client, this means a single platform that can identify qualified prospects, understand the context of each business, generate relevant outreach, and manage campaign execution with clear visibility into what was sent, what failed, and what needs follow-up.": "クライアントにとっては、適格な見込み客を特定し、各企業の文脈を理解し、適切なアウトリーチを生成し、送信内容・失敗・フォローアップ対象を明確に把握しながらキャンペーン実行を管理できる単一のプラットフォームを意味します。",
+                "1. Define target": "1. 対象を定義",
+                "Choose niche, geography, and campaign objective.": "ニッチ、地域、キャンペーン目的を選定します。",
+                "2. Discover leads": "2. リードを発見",
+                "Find companies, domains, emails, and contact pages.": "企業、ドメイン、メール、問い合わせページを見つけます。",
+                "3. Enrich context": "3. 文脈を強化",
+                "Use RAG, vectors, and website signals to understand each prospect.": "RAG、ベクトル、Webサイトシグナルを使って各見込み客を理解します。",
+                "4. Generate outreach": "4. アウトリーチを生成",
+                "Create personalized email and form messages with LangChain and LangGraph.": "LangChainとLangGraphで、パーソナライズされたメールとフォーム文面を作成します。",
+                "5. Deliver and track": "5. 配信と追跡",
+                "Schedule sending, submit forms, and monitor success, failures, and follow-ups.": "送信をスケジューリングし、フォームを送信し、成功・失敗・フォローアップを監視します。",
+                "Lead discovery by industry, location, and keywords": "業種・地域・キーワードによるリード発見",
+                "Website and contact data extraction": "Webサイトと連絡先データの抽出",
+                "AI-generated personalized email campaigns": "AI生成によるパーソナライズメールキャンペーン",
+                "Bulk outreach campaign management": "大量アウトリーチキャンペーン管理",
+                "Smart time scheduling and follow-ups": "スマートな時間配信とフォローアップ",
+                "Contact form automation for selected sites": "対象サイトへの問い合わせフォーム自動化",
+                "Delivery monitoring and failure diagnostics": "配信監視と失敗診断",
+                "Opt-out, throttling, and reputation-safe sending controls": "配信停止、スロットリング、レピュテーション保護送信制御",
+                "RAG pipeline: Retrieval-augmented generation": "RAGパイプライン: 検索拡張生成",
+                "Vector search: Embeddings + vector database": "ベクトル検索: 埋め込み + ベクトルデータベース",
+                "Orchestration: LangChain": "オーケストレーション: LangChain",
+                "Workflow graphs: LangGraph": "ワークフローグラフ: LangGraph",
+                "Lead indexing: Structured CRM-style records": "リード索引: 構造化CRM形式レコード",
+                "Analytics: Campaign delivery tracking": "分析: キャンペーン配信追跡",
+                "Reduces manual marketing effort by automating lead discovery, research, and outreach execution.": "リード発見、調査、アウトリーチ実行を自動化し、手作業のマーケティング負荷を削減します。",
+                "Improves targeting precision through filtering, validation, RAG-based context, and AI-assisted personalization.": "フィルタリング、検証、RAGベースの文脈把握、AI支援パーソナライズにより、ターゲティング精度を向上します。",
+                "Provides campaign visibility with delivery tracking, failure diagnostics, engagement analytics, and follow-up control.": "配信追跡、失敗診断、エンゲージメント分析、フォローアップ制御により、キャンペーンの可視性を提供します。",
+                "Retrieves campaign context, lead profile data, and website signals before writing.": "生成前にキャンペーン文脈、リードプロフィールデータ、Webサイトのシグナルを取得します。",
+                "Uses embeddings and vector search to match the right message to the right company context.": "埋め込みとベクトル検索を使って、適切なメッセージを適切な企業文脈に一致させます。",
+                "Combines LangChain tools and LangGraph workflows to keep generation, validation, and follow-up steps connected.": "LangChainのツールとLangGraphのワークフローを組み合わせ、生成・検証・フォローアップの各ステップを連携させます。",
+                "Produces outreach that feels specific to the prospect instead of generic mass marketing.": "大量一斉送信ではなく、見込み客ごとに具体的に最適化されたアウトリーチを生成します。",
+                "A curated list of qualified businesses instead of raw scraped data.": "生のスクレイピングデータではなく、精査された有望企業リストを提供します。",
+                "Context-aware email and form messages that can be reused across campaigns.": "キャンペーン間で再利用可能な、文脈対応型のメールとフォーム文面を提供します。",
+                "A governed outreach workflow with scheduling, throttling, and follow-up rules.": "スケジューリング、スロットリング、フォローアップルールを備えた統制されたアウトリーチワークフローを提供します。",
+                "Clear reporting on sent, failed, bounced, and completed outreach actions.": "送信済み、失敗、バウンス、完了済みの各アウトリーチ動作を明確にレポートします。",
+                "A scalable foundation that can grow from a single niche campaign to multiple markets.": "単一ニッチのキャンペーンから複数市場へ拡張できるスケーラブルな基盤です。",
                 "Inventory management for sales floors": "売り場向け在庫管理",
                 "Online learning platform for students": "学生向けオンライン学習プラットフォーム",
                 "Home care reservation system for patients": "患者向け在宅ケア予約システム",
