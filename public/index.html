@@ -75,6 +75,9 @@
     </script>
 
     <!-- ========================= CSS here ========================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Red+Hat+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/LineIcons.2.0.css" />
@@ -87,6 +90,40 @@
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
+      /* Home: typography & polish (loads after main.css) */
+      body {
+        font-family: "Inter", "Red Hat Display", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+      .hero-content h1.banner-heading-color-1 {
+        text-wrap: balance;
+        letter-spacing: -0.02em;
+      }
+      .hero-content p {
+        max-width: 36rem;
+        line-height: 1.65;
+      }
+      .hero-content .hero-tagline {
+        display: block;
+        margin-top: 0.75rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: rgba(15, 24, 40, 0.75);
+        letter-spacing: 0.01em;
+      }
+      .hero-content .button {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem 1rem;
+      }
+      .hero-content .button .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
       /* Mobile responsive - home page */
       @media (max-width: 991px) {
         .section-hearder h1,
@@ -194,10 +231,6 @@
             }
     </style>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
     <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
 </head>
 
@@ -242,29 +275,28 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ms-auto">
                                     <li class="nav-item">
-                                        <a href="index.html" class="page-scroll active"
-                                            aria-label="Toggle navigation">Home</a>
+                                        <a href="index.html" class="page-scroll active" aria-current="page">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="About.html" aria-label="Toggle navigation">About</a>
+                                        <a href="About.html">About</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="services.html" class="" aria-label="Toggle navigation">Service</a>         
-                                    </li>
-                                    
-                                    <li class="nav-item">
-                                        <a href="portfolio.html" aria-label="Toggle navigation">Portfolio</a>
+                                        <a href="services.html">Service</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="solutions.html" aria-label="Toggle navigation">Solutions</a>
-                                    </li>
-                                    
-                                    <li class="nav-item">
-                                        <a href="Event.html" class=""
-                                            aria-label="Toggle navigation">Events</a>
+                                        <a href="portfolio.html">Portfolio</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="Career.html" aria-label="Toggle navigation">Career</a>
+                                        <a href="solutions.html">Solutions</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="collaboration.html">Collaboration</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="Event.html">Events</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="Career.html">Career</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                         <a href="contact.html" aria-label="Toggle navigation">Contract</a>
@@ -304,11 +336,11 @@
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="hero-content">
                         <h1 class="wow fadeInLeft banner-heading-color-1 banner-accent" data-wow-delay=".3s">Empowering your ideas with smarter, faster, and better software solutions.</h1>
-                        <p class="wow fadeInLeft" data-wow-delay=".5s">From idea to impact — our engineers power web, mobile, and enterprise solutions with innovation, precision, and passion.</br>
-          <span>🔹 Custom Software | 🔹 Scalable Architecture </span></p>
+                        <p class="wow fadeInLeft" data-wow-delay=".5s">From idea to impact — our engineers power web, mobile, and enterprise solutions with innovation, precision, and passion.<br>
+                            <span class="hero-tagline">Custom software · Scalable architecture</span></p>
                         <div class="button wow fadeInLeft" data-wow-delay=".7s">
-                            <a href="contact.html" class="btn"> Book a Free Consultation</a>
-                            <a href="contact.html" class="btn btn-alt"> Contact Us</a>
+                            <a href="contact.html" class="btn">Book a Free Consultation</a>
+                            <a href="contact.html" class="btn btn-alt">Contact Us</a>
                                 
                         </div>
                     </div>
@@ -354,7 +386,7 @@
 
     <!-- Start Why Trust Area -->
 
-    <Section id="why-trust-area" class="trust-section-padding">
+    <section id="why-trust-area" class="trust-section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -428,7 +460,7 @@
                 </div>
             </div> -->
         </div>
-    </Section>
+    </section>
 
 
     <!-- End Why Trust Area -->
@@ -492,7 +524,7 @@
 
 
     <!-- Start Services-section -->
-    <Section id="our-servies-part" class="our-servies-part-section-padding">
+    <section id="our-servies-part" class="our-servies-part-section-padding">
                 <div class="container">
                     <div class="services-decor"><div class="shape s1"></div><div class="shape s2"></div></div>
                     <div class="row">
@@ -620,7 +652,7 @@
                     <div class="section-hearder text-center ">
                         <h1 class="common-heading-color-1">Portfolio</h1>
                         <span></span>
-                        <p>We go the extra mile in all our projects. Starting with the discovery stage when we carefully analyze your requirements and up to the launch of the finalized product.Cloud Production LTD main goal is to exceed expectations and deliver solution which will be the best fit for each specific business case and take your company to the next level of efficiency.</p>
+                        <p>We go the extra mile in all our projects. Starting with the discovery stage when we carefully analyze your requirements and up to the launch of the finalized product. Cloud Production LTD main goal is to exceed expectations and deliver solution which will be the best fit for each specific business case and take your company to the next level of efficiency.</p>
       
                     </div>
                     
@@ -712,7 +744,7 @@
 
     <!-- Start our-core-technology -->
 
-    <Section id="our-core-technology" class="our-core-technology padding-50">
+    <section id="our-core-technology" class="our-core-technology padding-50">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -977,7 +1009,7 @@
 
             </div>
         </div>
-    </Section>
+    </section>
 
     <!-- End our-core-technology -->
 
@@ -1846,7 +1878,7 @@
                         <div class="single-footer f-about">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/images/logo/logo.png" class="image-fluid" alt="#">
+                                    <img src="assets/images/logo/logo.png" class="image-fluid" alt="Cloud Production LTD">
                                 </a>
                             </div>
                             <p>Cloud Production LTD is a trusted name in software development, known for delivering high-quality, scalable, and reliable digital solutions tailored to your business needs.</p>
@@ -1870,7 +1902,8 @@
                                     <h3>Company</h3>
                                     <ul>
                                         <li><a href="About.html">About Us</a></li>
-                                        <li><a href="javascript:void(0)">Services</a></li>
+                                        <li><a href="collaboration.html">Collaboration</a></li>
+                                        <li><a href="services.html">Services</a></li>
                                         <li><a href="javascript:void(0)">Latest News</a></li>
                                         
                                     </ul>
@@ -1886,7 +1919,7 @@
                                         <li><a href="javascript:void(0)">Privacy Policy</a></li>
                                         <li><a href="javascript:void(0)">Terms & Condition</a></li>
                                         <li><a href="javascript:void(0)">Community</a></li>
-                                        <li><a href="javascript:void(0)">Contact Us</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </div>
                                 <!-- End Single Widget -->
@@ -1905,7 +1938,7 @@
                                         <li ><a href="javascript:void(0)" class="footer-address">
                                                 <span><i class="fa-solid fa-envelope"></i></span>
                                                 
-                                                <p>info@cloudproductio.com</br> admin@clouoductio.com</p>
+                                                <p>info@cloudproductionltd.com<br>admin@cloudproductionltd.com</p>
                                             </a>
                                         </li>
                                         <li ><a href="javascript:void(0)" class="footer-address">
